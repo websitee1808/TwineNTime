@@ -768,6 +768,15 @@
     }
 
     function keBeranda() {
+      const semuaBagian = ["slider-container", "produk", "deskripsi", "kontak", "pembayaran", "keranjang", "sosmed"];
+      semuaBagian.forEach(id => {
+        const elemen = document.getElementById(id);
+        if (elemen) {
+          elemen.style.display = 'block';
+          elemen.classList.add('show');
+        }
+      });
+      bagianAktif = null;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
