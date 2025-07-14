@@ -99,7 +99,7 @@
       text-align: center;
     }
     .product img {
-      width: 150px;
+      width: 220px;
       cursor: pointer;
       border-radius: 8px;
     }
@@ -419,20 +419,46 @@
       <p>Selamat datang di TwineNTime, tempat di mana setiap bunga dirangkai dengan cinta dan setiap detail memiliki makna. Kami menghadirkan rangkaian bouquet yang elegan, personal, dan berkelas untuk menyempurnakan setiap momen spesial Anda – dari ulang tahun, wisuda, pernikahan, hingga hadiah penuh perhatian untuk orang tercinta.</p>
       <p>Dengan sentuhan kreatif dan kualitas bunga terbaik, TwineNTime hadir bukan hanya untuk menjual bunga, tapi menciptakan cerita. Kami percaya, setiap ikatan pita dan kelopak bunga mampu menyampaikan perasaan yang tak terucap.</p>
       <p>✨ Jadikan momen Anda abadi bersama TwineNTime ✨<br>
+
+      <h3>Lokasi Toko</h3>
+      <p>
+        Jl. KSU Gang. Kinan No. 92b RT 03/06, Kel. Sukmajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat, ID 16412
+      </p>
+        <p style="margin-top: 10px;">
+        <a href="https://maps.app.goo.gl/LdaCAZAfmFPpdP519?g_st=aw" target="_blank" style="color:#1976d2; font-weight:bold;">
+          Lihat di Google Maps
+        </a>
+      </p>
     </section>
 
     <section id="kontak" class="section">
       <h2>Kontak Kami</h2>
-      <p>WhatsApp: <a href="https://wa.me/6282113904423">0821-1390-4423</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/twinentime?igsh=MXZzdGRrNGR5bnpnNw==" target="_blank">@twinentime</a></p>
+      <p>
+        <img src="https://cdn-icons-png.flaticon.com/128/733/733585.png" alt="WhatsApp" style="width: 20px; vertical-align: middle;">
+        <a href="https://wa.me/6282113904423" target="_blank">0821-1390-4423</a>
+      </p>
+    </section>
+
+    <section id="sosmed" class="section">
+      <h2>Sosial Media</h2>
+      <p>
+        <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="Instagram" style="width: 20px; vertical-align: middle;">
+        <a href="https://www.instagram.com/twinentime?igsh=MXZzdGRrNGR5bnpnNw==" target="_blank">@twinentime</a>
+      </p>
     </section>
 
     <section id="pembayaran" class="section">
       <h2>Metode Pembayaran</h2>
       <p>Kami menerima pembayaran melalui:</p>
-      <ul>
-        <li>ShopeePay : 0821-1390-4423</li>
-        <li>Dana : 0821-1390-4423</li>
+      <ul style="list-style: none; padding: 0;">
+        <li>
+          <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-ShopeePay-V-635x635.png" alt="ShopeePay" style="width: 24px; vertical-align: middle; margin-right: 6px;">
+          0821-1390-4423
+        </li>
+        <li>
+          <img src="https://www.shutterstock.com/image-vector/dana-company-logo-largest-digital-600nw-2351857125.jpg" alt="Dana" style="width: 24px; vertical-align: middle; margin-right: 6px;">
+          0821-1390-4423
+        </li>
       </ul>
     </section>
 
@@ -508,7 +534,7 @@
     window.onload = () => {
       document.getElementById('popup-welcome').style.display = 'flex';
 
-      const semuaBagian = ["slider-container", "produk", "deskripsi", "kontak", "pembayaran", "keranjang"];
+      const semuaBagian = ["slider-container", "produk", "deskripsi", "kontak", "pembayaran", "keranjang", "sosmed"];
       semuaBagian.forEach(id => {
         const elemen = document.getElementById(id);
         if (elemen) {
@@ -522,7 +548,7 @@
     let bagianAktif = null;
 
     function toggleBagian(bagianId) {
-      const semuaBagian = ["slider-container", "produk", "deskripsi", "kontak", "pembayaran", "keranjang"];
+      const semuaBagian = ["slider-container", "produk", "deskripsi", "kontak", "pembayaran", "keranjang", "sosmed"];
       const target = document.getElementById(bagianId);
 
       if (bagianAktif === bagianId) {
