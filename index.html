@@ -3,390 +3,730 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TwineNTime - Toko bouquet pink & biru, jual berbagai jenis bunga dan hadiah menarik.">
-  <meta name="keywords" content="bouquet, bunga, hadiah, TwineNTime, pink, biru">
-  <meta name="author" content="TwineNTime">
+  <link rel="icon" href="foto/TwineNTime.png" type="image/png">
 
   <title>TwineNTime - Bouquet Shop</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+  <!-- SEO -->
+  <meta name="title" content="TwineNTime | Custom Bouquet & Gift Hampers">
+  <meta name="description" content="Temukan bouquet uang, bunga, snack, dan custom wrapping di TwineNTime. Toko hadiah terpercaya untuk kejutan spesial dan momen tak terlupakan.">
+  <meta name="keywords" content="bouquet uang, toko bunga online, hadiah unik, snack bouquet, bouquet wisuda, kado ulang tahun, custom bunga, bouquet lucu, TwineNTime, flower gift, gift hampers">
+  <meta name="author" content="TwineNTime">
+  <meta name="robots" content="index, follow">
+
+  <!-- Social Media Tags (Open Graph untuk Facebook & LinkedIn) -->
+  <meta property="og:title" content="TwineNTime | Bouquet Custom & Hampers Kekinian">
+  <meta property="og:description" content="Bouquet cantik & hadiah kekinian: bunga, uang, snack, dan custom wrap. Kirim kejutan manis sekarang!">
+  <meta property="og:image" content="https://websitee1808.github.io/TwineNTime/foto/TwineNTime.png">
+  <meta property="og:url" content="https://websitee1808.github.io/TwineNTime/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title" content="TwineNTime | Custom Bouquet & Gift Hampers">
+  <meta name="twitter:description" content="Toko hadiah unik untuk momen spesial: bouquet uang, bunga, dan snack. Beli sekarang!">
+  <meta name="twitter:image" content="https://websitee1808.github.io/TwineNTime/foto/TwineNTime.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Schema Markup JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "TwineNTime",
+    "image": "https://websitee1808.github.io/TwineNTime/foto/TwineNTime.png",
+    "url": "https://websitee1808.github.io/TwineNTime/",
+    "telephone": "+6289601862882",
+    "sameAs": ["https://www.instagram.com/twinentime"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #ffe6f0;
+      background: linear-gradient(to bottom, #fce4ec, #e1f5fe);
       color: #333;
     }
     header {
-      background: #ffccf2;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-    }
-    header img {
-      height: 50px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.8em;
-      color: #cc3399;
-    }
-    .running-text {
-      background: #ffb3d9;
-      padding: 10px;
-      overflow: hidden;
-    }
-    .running-text marquee {
-      color: #cc3399;
-      font-weight: bold;
-    }
-    .search-bar {
-      padding: 10px;
+      background: #f8bbd0;
+      color: white;
+      padding: 1rem;
       text-align: center;
     }
-    .search-bar input {
-      width: 200px;
-      padding: 8px 12px;
-      border: 1px solid #ccc;
-      border-radius: 25px;
-      font-size: 0.9em;
-    }
-    .search-bar button {
-      padding: 10px 20px;
-      margin-left: 8px;
-      background-color: #6f59eb;
+    .running-text {
+      background: #1976d2;
       color: white;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 0.9em;
+      padding: 0.5rem;
+      overflow: hidden;
     }
     nav {
-      background: #ffb3d9;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
+      background: #f8bbd0;
       display: flex;
       justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      margin: 0 15px;
+      gap: 1rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
     }
-    nav a.active {
-      background-color: white;
-      color: #cc3399 !important;
-      padding: 5px 15px;
+    nav a:hover {
+      background: #1565c0;
+    }
+    .product {
+      border: 1px solid #90caf9;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #fce4ec;
+      text-align: center;
+    }
+    .product img {
+      width: 150px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .cart {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #1976d2;
+      color: white;
+      padding: 0.5rem 1rem;
       border-radius: 20px;
-      transition: all 0.3s ease;
+      cursor: pointer;
+      z-index: 9999;
+    }
+    .section {
+      margin: 2rem;
+      padding: 1rem;
+      background: #e1f5fe; 
+      border-left: 5px solid #81d4fa;
+    }
+    .popup, #popup-welcome {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .popup-content {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      max-width: 400px;
+      text-align: center;
+    }
+    button {
+      background: #c66989;
+      color: rgb(10, 9, 9);
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background: #0d47a1;
+      transform: scale(1.05);
+    }
+    .dropdown {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .dropdown:hover {
+      background: #1565c0;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #1976d2;
+      border-radius: 4px;
+      min-width: 150px;
+      z-index: 999;
+    }
+    .submenu a {
+      display: block;
+      padding: 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+    .submenu a:hover {
+      background: #1565c0;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .slider-container {
+      overflow: hidden;
+      width: calc(100% - 20px);
+      max-width: 1600px;
+      height: 500px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 8px;
     }
     .slider {
-      margin: 20px auto;
-      padding: 10px;
-      width: calc(100% - 40px);
-      max-width: 1200px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      background-color: white;
+      display: flex;
+      width: 100%;
+      animation: slide 15s ease-in-out infinite;
     }
     .slider img {
       width: 100%;
-      height: auto;
-      object-fit: contain;
+      flex-shrink: 0;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(0); }
+      30% { transform: translateX(-100%); }
+      55% { transform: translateX(-100%); }
+      60% { transform: translateX(-200%); }
+      85% { transform: translateX(-200%); }
+      90% { transform: translateX(0); }
+      100% { transform: translateX(0); }
+    }
+    .section {
+      margin: 2rem;
+      padding: 1rem;
+      background: #e1f5fe; 
+      border-left: 5px solid #81d4fa;
+      display: none;
       opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: opacity 1s ease-in-out;
+      transition: opacity 0.5s;
     }
-    .slider img.active {
-      opacity: 1;
-      position: static;
+    .section.show {
       display: block;
-      margin: 0 auto;
+      opacity: 1;
     }
-    .produk-section {
-      padding: 20px;
-    }
-    .produk-item {
+    .popup-content {
       background: white;
-      border-radius: 10px;
-      margin: 10px auto;
-      padding: 15px;
+      padding: 1rem;
+      border-radius: 8px;
       max-width: 400px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      cursor: pointer;
-    }
-    .produk-item img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .produk-item h3, .produk-item p {
       text-align: center;
-      margin: 10px 0 5px;
+      position: relative;
     }
-    footer {
-      background-color: #dbe9ff;
-      padding: 30px 20px;
-      margin-top: 40px;
-    }
-    footer h3 {
-      color: #3366cc;
-    }
-    footer a {
-      color: #3366cc;
-      text-decoration: none;
-    }
-    .produk-grid {
+    #popup-zoom .popup-content {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      align-items: center;
+      padding: 0;
     }
-    .produk-item {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      width: 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-align: center;
+    @media (max-width: 768px) {
+      .slider-container {
+        height: 300px;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .product img {
+        width: 100px;
+      }
+      button, .btn-portfolio {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+      }
+      .cart {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.3rem 0.7rem;
+      }
     }
-    .produk-item img {
-      width: 100%;
-      border-radius: 10px;
+    body.dark-mode {
+      background: linear-gradient(to bottom, #880e4f, #0d47a1);
+      color: #f1f1f1;
     }
-    .produk-item button {
-      margin: 5px;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .keranjang-btn {
-      background-color: #ff80bf;
+
+    body.dark-mode header {
+      background: #ad1457;
       color: white;
+    }
+
+    body.dark-mode .running-text {
+      background: #0d47a1;
+      color: white;
+    }
+
+    body.dark-mode nav {
+      background: #0d47a1;
+    }
+
+    body.dark-mode nav a:hover,
+    body.dark-mode .dropdown:hover {
+      background: #1565c0;
+    }
+
+    body.dark-mode .product {
+      background: #4a148c;
+      border: 1px solid #1a237e;
+    }
+
+    body.dark-mode .section {
+      background: #2b2b2b;
+      border-left: 5px solid #0d47a1;
+    }
+
+    body.dark-mode .popup-content {
+      background: #333;
+      color: #f1f1f1;
+    }
+
+    body.dark-mode button,
+    body.dark-mode {
+      background: #ad1457;
+      color: white;
+    }
+
+    body.dark-mode button:hover,
+    body.dark-mode {
+      background: #880e4f;
     }
     .shopee-btn {
       background-color: #ff6600;
       color: white;
     }
-    .info-section {
-      background-color: #e0f0ff;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px auto;
-      width: 90%;
-      max-width: 700px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .info-section h3 {
-      color: #3366cc;
-    }
   </style>
 </head>
 <body>
   <header>
-    <img src="foto/TwineNTime.png" alt="Logo Toko">
-    <h1>TwineNTime</h1>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+      <img src="foto/TwineNTime.png" alt="Logo" style="width: 120px; height: 120px; border-radius: 50%;">
+      <h1>TwineNTime</h1>
+    </div>
   </header>
 
   <div class="running-text">
-    <marquee>🌷 Kejutan Manis Lewat Bunga Cantik – Custom bouquet dengan pesan pribadi untuk orang tersayang, hanya di toko bunga online terpercaya kami 🌼</marquee>
+    <marquee>🌷 Kejutan Manis Lewat Bunga Cantik – Custom bouquet dengan pesan pribadi untuk orang tersayang, hanya di toko bunga online terpercaya kami 🌼
+</marquee>
   </div>
 
-  <div class="search-bar">
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Cari produk...">
-      <button onclick="cariProduk()">Cari</button>
-    </div>
+  <div style="padding: 1rem; text-align: center;">
+    <input type="text" id="search-produk" placeholder="Cari Produk..." style="padding: 0.5rem; width: 50%; border-radius: 4px; border: 1px solid #ccc;">
+    <button onclick="cariProduk()" style="margin-left: 10px;">Cari</button>
+  </div>
+
+  <div class="cart" onclick="bukaPopupKeranjang()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
   </div>
 
   <nav>
-    <ul>
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#profil">Profil Toko</a></li>
-      <li><a href="#produk">Produk</a></li>
-      <li><a href="#kontak">Contact Us</a></li>
-      <li><a href="#pembayaran">Pembayaran</a></li>
-    </ul>
+    <a href="#" onclick="keBeranda(); return false;">Beranda</a>
+    <div class="dropdown">
+      Produk
+      <div class="submenu">
+        <a href="#" onclick="tampilProduk('Bouquet Money Bloom'); return false;">Bouquet Money Bloom</a>
+        <a href="#" onclick="tampilProduk('Bouquet Classic Blossom'); return false;">Bouquet Classic Blossom</a>
+        <a href="#" onclick="tampilProduk('Bouquet Nyamwrap'); return false;">Bouquet Nyamwrap</a>
+        <a href="#" onclick="tampilProduk('Bouquet Favorwrap'); return false;">Bouquet Favorwrap</a>
+      </div>
+    </div>
+    <a href="#deskripsi" onclick="toggleBagian('deskripsi'); return false;">Profil Toko</a>
+    <a href="#kontak" onclick="toggleBagian('kontak'); return false;">Kontak</a>
+    <a href="#" onclick="kePembayaran(); return false;">Pembayaran</a>
+    <button id="toggle-mode" class="btn-portfolio" style="margin-left:10px;">🌙</button>
   </nav>
 
-  <div class="slider" id="slider">
-    <img src="foto/Slider1.jpg" alt="Slider 1" class="active">
-    <img src="foto/Slider2.jpg" alt="Slider 2">
-    <img src="foto/Slider3.jpg" alt="Slider 3">
-  </div>
-
-  <div class="produk-section" id="produk">
-    <div class="produk-grid">
-      <!-- Produk 1 -->
-      <div class="produk-item">
-        <h3>Bouquet Money Bloom</h3>
-        <img src="foto/Money Bloom.jpg" alt="Bouquet Money Bloom">
-        <p>“Bunga boleh layu, tapi duit nggak!”<br>
-        <p>Bouquet uang anti basi — hadiah kece, bikin senyum sampai dompet! 🤑💐</p>
-        <p><strong>Rp50.000</strong></p>
-        <button class="keranjang-btn">Tambah ke Keranjang</button>
-        <button class="shopee-btn" onclick="window.open('https://id.shp.ee/WkLcFrM', '_blank')">Beli di Shopee</button>
-      </div>
-
-      <!-- Produk 2 -->
-      <div class="produk-item">
-        <h3>Bouquet Classic Blossom</h3>
-        <img src="foto/Classic Blossom.jpg" alt="Bouquet Classic Blossom">
-        <p>Rangkaian kreasi bunga dengan sentuhan elegan.<br>
-        <p>Perpaduan warna lembut dan harum yang menenangkan, sempurna untuk hadiah penuh cinta di setiap momen istimewa.</p>
-        <p><strong>Rp45.000</strong></p>
-        <button class="keranjang-btn">Tambah ke Keranjang</button>
-        <button class="shopee-btn" onclick="window.open('https://id.shp.ee/1uyHBXc', '_blank')">Beli di Shopee</button>
-      </div>
-
-      <!-- Produk 3 -->
-      <div class="produk-item">
-        <h3>Bouquet Nyamwrap</h3>
-        <img src="foto/Nyamwrap .jpg" alt="Bouquet Nyamwrap">
-        <p>Rangkaian camilan favorit yang disusun cantik jadi buket.<br>
-        <p>Hadiah unik, mengenyangkan, dan bikin hati senang sekaligus perut kenyang!</p>
-        <p><strong>Rp48.000</strong></p>
-        <button class="keranjang-btn">Tambah ke Keranjang</button>
-        <button class="shopee-btn" onclick="window.open('https://id.shp.ee/B95Kk2u', '_blank')">Beli di Shopee</button>
-      </div>
-
-      <!-- Produk 4 -->
-      <div class="produk-item">
-        <h3>Bouquet Favorwrap</h3>
-        <img src="foto/Favorwrap.jpg" alt="Bouquet Favorwrap">
-        <p>Buket spesial dengan balutan wrapping pilihanmu (Custom wrapping).</p>
-        <p><strong>Rp55.000</strong></p>
-          <button class="keranjang-btn">Tambah ke Keranjang</button>
-          <button class="shopee-btn" onclick="window.open('https://id.shp.ee/FCTofQ5', '_blank')">Beli di Shopee</button>
-      </div>
+  <div style="margin-top: 50px;">
+    <div class="slider-container" id="slider-container">
+      <div class="slider">
+      <img src="foto/Slider1.jpg" alt="Slide 1">
+      <img src="foto/Slider2.jpg" alt="Slide 2">
+      <img src="foto/Slider3.jpg" alt="Slide 3">
     </div>
   </div>
 
-  <!-- Profil Toko -->
-  <div class="info-section" id="profil">
-    <h3>Profil Toko</h3>
-    <p>🌸 TwineNTime – Merangkai Momen, Membungkus Kasih 🌸<br>
-    <p>Selamat datang di TwineNTime, tempat di mana setiap bunga dirangkai dengan cinta dan setiap detail memiliki makna. Kami menghadirkan rangkaian bouquet yang elegan, personal, dan berkelas untuk menyempurnakan setiap momen spesial Anda – dari ulang tahun, wisuda, pernikahan, hingga hadiah penuh perhatian untuk orang tercinta.</p>
-    <p>Dengan sentuhan kreatif dan kualitas bunga terbaik, TwineNTime hadir bukan hanya untuk menjual bunga, tapi menciptakan cerita. Kami percaya, setiap ikatan pita dan kelopak bunga mampu menyampaikan perasaan yang tak terucap.</p>
-    <p>✨ Jadikan momen Anda abadi bersama TwineNTime ✨<br>
+  <main>
+    <section id="produk" class="section">
+      <div class="product">
+        <h3>Bouquet Money Bloom</h3>
+        <img src="foto/Money Bloom.jpg" alt="Bouquet Money Bloom dari TwineNTime" onclick="zoom('Bouquet Money Bloom')">
+        <p>“Bunga boleh layu, tapi duit nggak!”<br>
+        <p>Bouquet uang anti basi — hadiah kece, bikin senyum sampai dompet! 🤑💐</p>
+        <p><strong>Harga: Rp 50.000</strong></p>
+        <button onclick="tambahLangsungKeKeranjang('Bouquet Money Bloom', 50000)">Tambah ke Keranjang</button>
+        <button class="shopee-btn" onclick="window.open('https://id.shp.ee/WkLcFrM', '_blank')">Beli di Shopee</button>
+      </div>
+      <div class="product">
+        <h3>Bouquet Classic Blossom</h3>
+        <img src="foto/Classic Blossom.jpg" alt="Bouquet Classic Blossom dari TwineNTime" onclick="zoom('Bouquet Classic Blossom')">
+        <p>Rangkaian kreasi bunga dengan sentuhan elegan.<br>
+        <p>Perpaduan warna lembut dan harum yang menenangkan, sempurna untuk hadiah penuh cinta di setiap momen istimewa.</p>
+        <p><strong>Harga: Rp 45.000</strong></p>
+        <button onclick="tambahLangsungKeKeranjang('Bouquet Classic Blossom', 45000)">Tambah ke Keranjang</button>
+        <button class="shopee-btn" onclick="window.open('https://id.shp.ee/1uyHBXc', '_blank')">Beli di Shopee</button>
+      </div>
+      <div class="product">
+        <h3>Bouquet Nyamwrap</h3>
+        <img src="foto/Nyamwrap .jpg" alt="Bouquet Nyamwrap dari TwineNTime" onclick="zoom('Bouquet Nyamwrap')">
+        <p>Rangkaian camilan favorit yang disusun cantik jadi buket.<br>
+        <p>Hadiah unik, mengenyangkan, dan bikin hati senang sekaligus perut kenyang!</p>
+        <p><strong>Harga: Rp 48.000</strong></p>
+        <button onclick="tambahLangsungKeKeranjang('Bouquet Nyamwrap', 48000)">Tambah ke Keranjang</button>
+        <button class="shopee-btn" onclick="window.open('https://id.shp.ee/B95Kk2u', '_blank')">Beli di Shopee</button>
+      </div>
+      <div class="product">
+        <h3>Bouquet Favorwrap</h3>
+        <img src="foto/Favorwrap.jpg" alt="Bouquet Favorwrap dari TwineNTime" onclick="zoom('Bouquet Favorwrap')">
+        <p>Buket spesial dengan balutan wrapping pilihanmu (Custom wrapping).</p>
+        <p><strong>Harga: Rp 55.000</strong></p>
+        <button onclick="tambahLangsungKeKeranjang('Bouquet Favorwrap', 55000)">Tambah ke Keranjang</button>
+        <button class="shopee-btn" onclick="window.open('https://id.shp.ee/FCTofQ5', '_blank')">Beli di Shopee</button>
+      </div>
+    </section>
+  </main>
+
+    <section id="deskripsi" class="section">
+      <h2>Profil Toko</h2>
+      <p>🌸 TwineNTime – Merangkai Momen, Membungkus Kasih 🌸<br>
+      <p>Selamat datang di TwineNTime, tempat di mana setiap bunga dirangkai dengan cinta dan setiap detail memiliki makna. Kami menghadirkan rangkaian bouquet yang elegan, personal, dan berkelas untuk menyempurnakan setiap momen spesial Anda – dari ulang tahun, wisuda, pernikahan, hingga hadiah penuh perhatian untuk orang tercinta.</p>
+      <p>Dengan sentuhan kreatif dan kualitas bunga terbaik, TwineNTime hadir bukan hanya untuk menjual bunga, tapi menciptakan cerita. Kami percaya, setiap ikatan pita dan kelopak bunga mampu menyampaikan perasaan yang tak terucap.</p>
+      <p>✨ Jadikan momen Anda abadi bersama TwineNTime ✨<br>
+    </section>
+
+    <section id="kontak" class="section">
+      <h2>Kontak Kami</h2>
+      <p>WhatsApp: <a href="https://wa.me/6289601862882">089601862882</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/twinentime?igsh=MXZzdGRrNGR5bnpnNw==" target="_blank">@twinentime</a></p>
+    </section>
+
+    <section id="pembayaran" class="section">
+      <h2>Metode Pembayaran</h2>
+      <p>Kami menerima pembayaran melalui:</p>
+      <ul>
+        <li>ShopeePay : 089601862882</li>
+        <li>Dana : 089601862882</li>
+      </ul>
+    </section>
+
+  <div id="popup-welcome" class="popup">
+    <div class="popup-content">
+      <img src="foto/TwineNTime.png" alt="Arless Bouquet" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1rem;">
+      <h3>Ups, Kamu Ketahuan!</h3>
+      <p>Lagi stalking bunga cantik, ya? </p>
+      <button onclick="document.getElementById('popup-welcome').style.display='none'">🌺 Kepoin Yuk! 🌺</button>
+    </div>
   </div>
 
-  <!-- Kontak Kami -->
-  <div class="info-section" id="kontak">
-    <h3>Kontak Kami</h3>
-    <p>WhatsApp: <a href="https://wa.me/6289601862882">089601862882</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/twinentime" target="_blank">@twinentime</a></p>
+  <div id="popup-keranjang" class="popup">
+    <div class="popup-content">
+      <h3>Isi Keranjang</h3>
+      <ul id="list-popup-keranjang"></ul>
+      <p>Total: Rp<span id="total-popup">0</span></p>
+      <span onclick="tutupPopupKeranjang()" style="position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 1.5rem; color: #333;">&times;</span>
+    </div>
   </div>
 
-  <!-- Metode Pembayaran -->
-  <div class="info-section" id="pembayaran">
-    <h3>Metode Pembayaran</h3>
-    <p>Kami menerima pembayaran melalui:</p>
-    <ul>
-      <li>ShopeePay : 089601862882</li>
-      <li>Dana : 089601862882</li>
-    </ul>
+  <div id="popup-zoom" class="popup">
+    <div class="popup-content" style="
+      width: 300px; 
+      height: auto; 
+      background: rgba(0, 0, 0, 0.8); 
+      position: relative; 
+      padding: 1rem; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      border-radius: 8px;
+    ">
+      <span onclick="tutupZoom()" style="
+        position: absolute; 
+        top: 10px; 
+        right: 15px; 
+        cursor: pointer; 
+        font-size: 1.5rem; 
+        color: white;
+        z-index: 1001;
+      ">&times;</span>
+
+      <img id="zoom-image" src="" style="max-width: 100%; height: auto; border-radius: 8px;">
+    </div>
   </div>
 
   <script>
-    let index = 0;
-    const slides = document.querySelectorAll('.slider img');
-    setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 3000);
+    function pilihUkuran(nama) {
+      document.getElementById('popup').style.display = 'flex';
+    }
 
-    // Toggle Bagian Konten
-    const menuLinks = document.querySelectorAll('nav a');
-    const sections = ['slider', 'produk', 'profil', 'kontak', 'pembayaran'];
-    let currentVisible = null;
+    function tutupPopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
 
-    menuLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href').replace('#', '');
-
-        // Hilangkan semua highlight menu dulu
-        menuLinks.forEach(l => l.classList.remove('active'));
-
-        if (!targetId || !sections.includes(targetId)) {
-          showAllSections();
-          currentVisible = null;
-          return;
+    function zoom(nama) {
+      const produkList = document.querySelectorAll('#produk .product');
+      produkList.forEach(prod => {
+        const judul = prod.querySelector('h3').textContent;
+        if (judul === nama) {
+          const imgSrc = prod.querySelector('img').getAttribute('src');
+          document.getElementById('zoom-image').setAttribute('src', imgSrc);
+          document.getElementById('popup-zoom').style.display = 'flex';
         }
+      }); 
+    }
 
-        if (currentVisible === targetId) {
-          showAllSections();
-          currentVisible = null;
-          return;
+    function tutupZoom() {
+      document.getElementById('popup-zoom').style.display = 'none';
+    }
+
+    window.onload = () => {
+      document.getElementById('popup-welcome').style.display = 'flex';
+
+      const semuaBagian = ["slider-container", "produk", "deskripsi", "kontak", "pembayaran", "keranjang"];
+      semuaBagian.forEach(id => {
+        const elemen = document.getElementById(id);
+        if (elemen) {
+          elemen.style.display = 'block';
+          elemen.classList.add('show');
         }
-
-        // Tampilkan bagian
-        sections.forEach(id => {
-           const el = document.getElementById(id);
-           if (el) el.style.display = (id === targetId) ? 'block' : 'none';
-        });
-
-        this.classList.add('active'); // Tambahkan class aktif
-        currentVisible = targetId;
-        });
-    });
-
-    // Jika klik sembarang tempat di luar menu, tampilkan semua
-    document.addEventListener('click', function (e) {
-      const isMenu = e.target.closest('nav');
-      if (!isMenu && currentVisible !== null) {
-        showAllSections();
-        currentVisible = null;
-      }
-    });
-
-    function showAllSections() {
-      sections.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.style.display = 'block';
       });
+    };
+    
+    let keranjang = [];
+    let bagianAktif = null;
+
+    function toggleBagian(bagianId) {
+      const semuaBagian = ["slider-container", "produk", "deskripsi", "kontak", "pembayaran", "keranjang"];
+      const target = document.getElementById(bagianId);
+
+      if (bagianAktif === bagianId) {
+        semuaBagian.forEach(id => {
+          const elemen = document.getElementById(id);
+          if (elemen) elemen.style.display = 'block';
+        });
+        bagianAktif = null;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        semuaBagian.forEach(id => {
+          const elemen = document.getElementById(id);
+          if (elemen) elemen.style.display = (id === bagianId) ? 'block' : 'none';
+        });
+        bagianAktif = bagianId;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    const hargaProduk = {
+      "Bouquet Uang": { min: 50000, max: 350000 },
+      "Bouquet Kupu-kupu": { min: 35000, max: 50000 },
+      "Bouquet Satin": { tangkai: 8000, paket5: 35000 },
+      "Bouquet Artificial": { min: 35000, max: 135000 },
+      "Bouquet Snack": { min: 35000, max: 135000 },
+      "Bouquet Mercy/Kawat": { min: 35000, max: 135000 },
+      "Bouquet Foto": { min: 35000, max: 135000 },
+      "Doll Bouquet": { min: 35000, max: 135000 },
+      "Bouquet Manly": { min: 35000, max: 135000 },
+      "Gable Box": { min: 25000, max: 35000 }
+    };
+
+    let produkDipilih = "";
+    let hargaSementara = 0;
+
+    function simpanPesanan() {
+      keranjang.push({ nama: produkDipilih, harga: hargaSementara });
+      updateKeranjang();
+      tutupPopup();
+    }
+
+    function tutupPopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function tambahLangsungKeKeranjang(nama, harga) {
+      keranjang.push({ nama, harga });
+      updateKeranjang();
+    }
+
+    function updateKeranjang() {
+      document.getElementById('cart-count').textContent = keranjang.length;
+    }
+
+    function keBeranda() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function cariProduk() {
-      const keyword = document.getElementById('searchInput').value.toLowerCase();
-      const produkItems = document.querySelectorAll('.produk-item');
-      let ada = false;
+      const keyword = document.getElementById('search-produk').value.toLowerCase();
+      const produkList = document.querySelectorAll('#produk .product');
+      let ketemu = false;
 
-      produkItems.forEach(item => {
-        const namaProduk = item.querySelector('h3').textContent.toLowerCase();
-        if (namaProduk.includes(keyword)) {
-          item.style.display = 'block';
-          ada = true;
-        } else {
-          item.style.display = 'none';
+      produkList.forEach(prod => {
+        const nama = prod.querySelector('h3').textContent.toLowerCase();
+        if (nama.includes(keyword)) {
+          prod.scrollIntoView({ behavior: 'smooth' });
+          ketemu = true;
+          return;
         }
       });
 
-      // jika kosong atau dihapus, semua muncul lagi
-      if (keyword.trim() === '') {
-        produkItems.forEach(item => item.style.display = 'block');
+      if (!ketemu) {
+        alert('Produk tidak ditemukan!');
       }
     }
+
+    function kePembayaran() {
+      toggleBagian('pembayaran');
+    }
+
+    function bukaPopupKeranjang() {
+      updatePopupKeranjang();
+      document.getElementById('popup-keranjang').style.display = 'flex';
+    }
+
+    function tutupPopupKeranjang() {
+      document.getElementById('popup-keranjang').style.display = 'none';
+    }
+
+    function updatePopupKeranjang() {
+      const list = document.getElementById('list-popup-keranjang');
+      list.innerHTML = '';
+      let total = 0;
+
+      keranjang.forEach((item, index) => {
+        // Bungkus nama dan silang dalam 1 baris
+        const itemWrapper = document.createElement('div');
+        itemWrapper.style.display = 'flex';
+        itemWrapper.style.justifyContent = 'space-between';
+        itemWrapper.style.alignItems = 'center';
+        itemWrapper.style.marginBottom = '0.5rem';
+
+        const itemText = document.createElement('span');
+        itemText.textContent = `${item.nama} - Rp${item.harga.toLocaleString()}`;
+
+        const silang = document.createElement('span');
+        silang.innerHTML = '&times;';
+        silang.style.color = '#d81b60';
+        silang.style.fontWeight = 'bold';
+        silang.style.cursor = 'pointer';
+        silang.style.marginLeft = '10px';
+        silang.style.fontSize = '20px';
+        silang.onclick = () => hapusDariKeranjang(index);
+
+        itemWrapper.appendChild(itemText);
+        itemWrapper.appendChild(silang);
+
+        const beliBtn = document.createElement('button');
+        beliBtn.textContent = 'Beli via Shopee';
+        beliBtn.onclick = () => beliShopee(item.nama);
+        beliBtn.style.background = '#c2185b';
+        beliBtn.style.color = 'white';
+        beliBtn.style.border = 'none';
+        beliBtn.style.padding = '6px 12px';
+        beliBtn.style.borderRadius = '8px';
+        beliBtn.style.cursor = 'pointer';
+        beliBtn.style.marginTop = '0.3rem';
+
+        const container = document.createElement('div');
+        container.appendChild(itemWrapper);
+        container.appendChild(beliBtn);
+
+        list.appendChild(container);
+        total += item.harga;
+      });
+
+      document.getElementById('total-popup').textContent = total.toLocaleString();
+    }
+
+    function hapusDariKeranjang(index) {
+      keranjang.splice(index, 1);
+      updateKeranjang();
+      updatePopupKeranjang();
+    }
+
+    function beliShopee(nama) {
+      const links = {
+        "Bouquet Money Bloom": "https://id.shp.ee/WkLcFrM",
+        "Bouquet Classic Blossom": "https://id.shp.ee/1uyHBXc",
+        "Bouquet Nyamwrap": "https://id.shp.ee/B95Kk2u",
+        "Bouquet Favorwrap": "https://id.shp.ee/FCTofQ5"
+      };
+
+      if (links[nama]) {
+        window.open(links[nama], '_blank');
+      } else {
+        alert("Link Shopee tidak tersedia untuk produk ini.");
+      }
+    }
+
+    function tampilProduk(namaProduk) {
+      const semuaBagian = ["slider-container", "produk", "deskripsi", "kontak", "pembayaran", "keranjang"];
+      const produkSection = document.getElementById('produk');
+
+      if (bagianAktif === namaProduk) {
+        
+        semuaBagian.forEach(id => {
+          const elemen = document.getElementById(id);
+          if (elemen) elemen.style.display = 'block';
+        });
+        const semuaProduk = document.querySelectorAll('#produk .product');
+        semuaProduk.forEach(prod => prod.style.display = 'block');
+        bagianAktif = null;
+      } else {
+        
+        semuaBagian.forEach(id => {
+          const elemen = document.getElementById(id);
+          if (elemen) elemen.style.display = (id === 'produk') ? 'block' : 'none';
+        });
+
+        
+        const semuaProduk = document.querySelectorAll('#produk .product');
+        semuaProduk.forEach(prod => {
+          const nama = prod.querySelector('h3').textContent;
+          prod.style.display = nama.includes(namaProduk) ? 'block' : 'none';
+        });
+
+        bagianAktif = namaProduk;
+        produkSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    document.getElementById('toggle-mode').addEventListener('click', function () {
+      const body = document.body;
+      const tombol = document.getElementById('toggle-mode');
+      
+      body.classList.toggle('dark-mode');
+
+      if (body.classList.contains('dark-mode')) {
+        tombol.textContent = "☀️";
+      } else {
+        tombol.textContent = "🌙";
+      }
+    });
+
   </script>
+
 </body>
 </html>
